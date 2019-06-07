@@ -22,9 +22,10 @@
 #Samoyed      |___1______|___0______|
 
 
+dogs<-matrix(nrow = 4, ncol = 2, data = c(4,10,0,1,0,47,6,0))
 
-
-
+rownames(dogs)<-c("Chichi", "Pugs", "Collies", "Samoyed")
+colnames(dogs)<-c("Fighter", "Non-fighter")
 
 
 
@@ -34,6 +35,7 @@
 ##Using the correct indexing e.g. Matrix[row, column] you can assign a new value to that position in the matrix
 # in the same way you would assign a value to any other variable
 
+dogs[1,1]<-2
 
 
 x<-list(fighter= c("Samoyed"= TRUE, "collie"= FALSE))
@@ -59,7 +61,11 @@ x<-list(fighter= c("Samoyed"= TRUE, "collie"= FALSE))
 ## collies_weight = 18, 22, 25, 28, 20, 21.4
 ## samoyed_weight = 17.5
 
+dogs<-list(chichi_weight=c(2.3, 1.3), pugs_weight=c(rep(5.4, times=57)), collies_weight=c(18, 22, 25, 28, 20, 21.4), samoyed_weight=c(17.5))
+
+
 ##the weights should be entered as unique variables in the lists per breed. e.g. collie_weight = c(18,22,25,28,20,21.4)
+
 
 
 
@@ -67,6 +73,7 @@ x<-list(fighter= c("Samoyed"= TRUE, "collie"= FALSE))
 ##you also know how to index lists using $ 
 ##using $ run the mean function to calculate the average weight of each breed.
 
+mean(dogs[[1]])
 
 ## Using $ indexing to call the logical variable fight...so we can se which breeds fought and which didn't
 
